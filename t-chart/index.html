@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="./favicon.png">
+	<title>Statistics | t-test table</title>
+	<link rel="stylesheet" href="../style.css">
+	</head>
+	<body>
+		<div class="container">
+			<h1>T-test table</h1>
+			<p>Values must consist of numbers separated by commas, with an optional + or - sign before each number like 1,3,5,7,9. Don't use apace</p>
+
+			<form id="dataForm">   
+  				<div class="field-set">
+  					<div class="input_group">
+  			        <span class="input-item">X:</span>
+         			<input class="form-input" type="text" id="inx" pattern="[\s\+\-]?[0-9\s]+(,[\s\+\-]?[0-9\s]+)*" title="Values must consist of numbers separated by commas, with an optional + or - sign before each number like 1,3,5,7,9"  placeholder="1,3,5,7,9" required>
+         			</div>
+      				<br>
+
+      				<div class="input_group">
+				    <span class="input-item">Y:</span>
+      				<input class="form-input" type="text" id="iny"  pattern="[\s\+\-]?[0-9\s]+(,[\s\+\-]?[0-9\s]+)*" title="Values must consist of numbers separated by commas, with an optional + or - sign before each number like 1,3,5,7,9" placeholder="2,4,3,8,5" required>
+      				</div>
+      				<br>
+
+			      	<button class="log-in" type="submit"> Start </button>
+			   	</div>
+			</form>
+			<table id="table">
+				<thead>
+					<tr>
+						<th>x</th>
+						<th>y</th>
+						<th>x&#178;</th>
+						<th>y&#178;</th>
+						<th>xy</th>
+					</tr>
+				</thead>
+				<tbody id="tbody"></tbody>
+				<tfoot>
+					<tr>
+						<td>&sum;x = <span id="x"></span> </td>
+						<td>&sum;y = <span id="y"></span> </td>
+						<td>&sum;x&#178; = <span id="xx"></span> </td>
+						<td>&sum;y&#178; = <span id="yy"></span> </td>
+						<td>&sum;xy = <span id="xy"></span> </td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+		<script src="./script.js"></script>
+	</body>
+</html>
